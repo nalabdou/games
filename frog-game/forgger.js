@@ -52,7 +52,9 @@ class Frogger {
     jump() {
         if (this.moving === false) this.frameX = 1
         else if (this.frameX === 1) this.frameX = 0
-        froggerSound.play()
+        if (soundTrue) {
+            froggerSound.play()
+        }
 
     }
 }

@@ -79,7 +79,9 @@ function handleObstacles() {
     }
     for (let i = 0; i < carsArray.length; i++) {
         if (collision(frogger, carsArray[i])) {
-            collisionSound.play()
+            if (soundTrue) {
+                collisionSound.play()
+            }
             ctx4.drawImage(collisionImage, 0, 100, 100, 100, frogger.x, frogger.y, 50, 50)
             resetGame()
         }
@@ -96,7 +98,9 @@ function handleObstacles() {
         }
         if (!safe) {
             for (let i = 0; i < 30; i++) {
-                splashSound.play()
+                if (soundTrue) {
+                    splashSound.play()
+                }
                 ripplesArray.unshift(new Particle(frogger.x, frogger.y))
             }
             resetGame()

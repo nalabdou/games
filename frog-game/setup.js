@@ -31,6 +31,8 @@ let collisionsCount = 0
 let frame = 0
 let gameSpeed = 1
 let safe = false
+let soundController = document.querySelector('.sound')
+let soundTrue = soundController.getAttribute('data-sound') == 'true'
 
 const particlesArray = []
 const maxParticles = 300

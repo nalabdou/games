@@ -20,7 +20,9 @@ animate()
 
 
 function scored() {
-    scoreSound.play()
+    if (soundTrue) {
+        scoreSound.play()
+    }
     score++
     gameSpeed += 0.05
     frogger.x = canvas1.width / 2 - frogger.width / 2
@@ -69,4 +71,8 @@ window.addEventListener('keyup', (event) => {
     delete keys[event.code]
     frogger.moving = false
     frogger.frameX = 0
+})
+soundController.addEventListener('click', (e) => {
+    soundController.setAttribute('data-sound', !soundTrue)
+    soundTrue = !soundTrue
 })
