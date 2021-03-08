@@ -24,7 +24,7 @@ function scored() {
         scoreSound.play()
     }
     score++
-    gameSpeed += 0.05
+    gameSpeed += 0.5
     frogger.x = canvas1.width / 2 - frogger.width / 2
     frogger.y = canvas1.height - frogger.height - 40
 }
